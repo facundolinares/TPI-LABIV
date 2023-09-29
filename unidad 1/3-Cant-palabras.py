@@ -1,5 +1,5 @@
 # Solicitar al usuario el nombre del archivo de texto
-nombre_archivo = input("Ingrese el nombre del archivo de texto: ")
+nombre_archivo = input("Ingrese el nombre del archivo de texto con su formato: ")
 
 try:
     # Abrir el archivo en modo lectura
