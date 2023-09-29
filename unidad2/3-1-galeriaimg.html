@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Imágenes</title>
+    <style>
+        /* Estilos para las miniaturas de imágenes */
+        .thumbnail {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Galería de Imágenes</h2>
+
+    <!-- Miniaturas de imágenes -->
+    <div class="thumbnail" onclick="mostrarImagen('imagen1.jpg')">
+        <img src="img/imagen1_thumbnail.png" alt="Imagen 1">
+    </div>
+    <div class="thumbnail" onclick="mostrarImagen('imagen2.jpg')">
+        <img src="img/imagen2_thumbnail.jpg" alt="Imagen 2">
+    </div>
+    <!-- Agrega más miniaturas según sea necesario -->
+
+    <!-- Área para mostrar la imagen grande -->
+    <div id="imagenGrande">
+        <!-- La imagen grande se cargará aquí -->
+    </div>
+
+    <script>
+        function mostrarImagen(nombreImagen) {
+            const imagenGrande = document.getElementById("imagenGrande");
+            imagenGrande.innerHTML = `<img src="img/imagenGrande.jpg" alt="Imagen Grande">`;
+        }
+    </script>
+</body>
+</html>

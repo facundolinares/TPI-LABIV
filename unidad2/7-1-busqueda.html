@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Búsqueda Lineal en JavaScript</title>
+</head>
+<body>
+    <h2>Búsqueda Lineal en un Arreglo</h2>
+
+    <p>Arreglo de números: [10, 20, 30, 40, 50, 60]</p>
+    <label for="elementoBuscado">Elemento a buscar:</label>
+    <input type="number" id="elementoBuscado">
+    <button onclick="realizarBusqueda()">Buscar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function busquedaLineal(arreglo, elementoBuscado) {
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] === elementoBuscado) {
+                    return i; // Devuelve el índice del elemento encontrado
+                }
+            }
+            return -1; // Devuelve -1 si el elemento no se encuentra en el arreglo
+        }
+
+        function realizarBusqueda() {
+            const numeros = [10, 20, 30, 40, 50, 60];
+            const elementoBuscado = parseInt(document.getElementById("elementoBuscado").value);
+            const resultadoElemento = document.getElementById("resultado");
+
+            const resultado = busquedaLineal(numeros, elementoBuscado);
+
+            if (resultado !== -1) {
+                resultadoElemento.textContent = `El elemento ${elementoBuscado} se encuentra en la posición ${resultado+1}`;
+            } else {
+                resultadoElemento.textContent = `El elemento ${elementoBuscado} no se encuentra en el arreglo`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang ="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprobar si un número es primo</title>
+</head>
+<body>
+    <script>
+        function esPrimo(numero) {
+    if (numero <= 1) {
+        throw new Error("El número debe ser mayor que 1");
+    }
+
+    for (let i = 2; i < numero; i++) {
+        if (numero % i === 0) {
+            throw new Error("El número no es primo");
+        }
+    }
+
+    return true;
+}
+
+try {
+    const numeroIngresado = parseInt(prompt("Ingresa un número para verificar si es primo:"));
+    const resultado = esPrimo(numeroIngresado);
+    console.log(`${numeroIngresado} es primo.`);
+} catch (error) {
+    console.error(error.message);
+}
+    </script>
+</body>
+</html>

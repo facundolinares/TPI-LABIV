@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información del Producto</title>
+</head>
+<body>
+    <h2>Información del Producto</h2>
+
+    <div id="productoInfo">
+        <!-- La información del producto se mostrará aquí -->
+    </div>
+
+    <script>
+        // Crear un diccionario de producto
+        const producto = {
+            nombre: "Camiseta",
+            precio: 19.99,
+            cantidad: 50
+        };
+
+        // Mostrar la información del producto en la página
+        const productoInfo = document.getElementById("productoInfo");
+        productoInfo.innerHTML = `
+            <h3>Nombre: ${producto.nombre}</h3>
+            <p>Precio: $${producto.precio.toFixed(2)}</p>
+            <p>Cantidad en Stock: ${producto.cantidad}</p>
+        `;
+    </script>
+</body>
+</html>

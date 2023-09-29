@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Saludo con JavaScript</title>
+</head>
+<body>
+    <button id="saludoButton">Saludar</button>
+    <p id="mensajeSaludo"></p>
+
+    <script>
+        // Obtén una referencia al botón y al párrafo por su ID
+        const botonSaludo = document.getElementById("saludoButton");
+        const mensajeSaludo = document.getElementById("mensajeSaludo");
+
+        // Agrega un evento de clic al botón
+        botonSaludo.addEventListener("click", function () {
+            // Cambia el texto del párrafo por un mensaje de saludo
+            mensajeSaludo.textContent = "¡Hola, este es un mensaje de saludo!";
+        });
+    </script>
+</body>
+</html>

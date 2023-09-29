@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Suma de Números</title>
+</head>
+<body>
+
+    <p>Ingresa una lista de números separados por comas (por ejemplo: 1, 2, 3):</p>
+    <input type="text" id="inputNumbers">
+    <button onclick="calcularSuma()">Calcular Suma</button>
+    <p id="sumaResult"></p>
+
+    <script>
+        function calcularSuma() {
+            const inputNumbers = document.getElementById("inputNumbers").value;
+            const numbersArray = inputNumbers.split(',').map(Number);
+            const suma = numbersArray.reduce((total, numero) => total + numero, 0);
+            document.getElementById("sumaResult").textContent = `La suma de los números es: ${suma}`;
+        }
+    </script>
+
+</body>
+</html>

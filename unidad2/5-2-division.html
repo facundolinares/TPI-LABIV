@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>División con Manejo de Excepciones</title>
+</head>
+<body>
+    <h2>División con Manejo de Excepciones</h2>
+    <label for="numero1">Número 1:</label>
+    <input type="number" id="numero1">
+    <br>
+    <label for="numero2">Número 2:</label>
+    <input type="number" id="numero2">
+    <br>
+    <button onclick="realizarDivision()">Dividir</button>
+    <p id="resultado"></p>
+
+    <script>
+        function realizarDivision() {
+            const numero1 = parseFloat(document.getElementById("numero1").value);
+            const numero2 = parseFloat(document.getElementById("numero2").value);
+            const resultadoElemento = document.getElementById("resultado");
+
+            try {
+                if (isNaN(numero1) || isNaN(numero2)) {
+                    throw new Error("Por favor, ingresa números válidos.");
+                }
+
+                if (numero2 === 0) {
+                    throw new Error("No se puede dividir por cero.");
+                }
+
+                const resultado = numero1 / numero2;
+                resultadoElemento.textContent = `Resultado de la división: ${resultado}`;
+            } catch (error) {
+                resultadoElemento.textContent = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
